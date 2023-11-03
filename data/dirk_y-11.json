@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "dirk_y",
+  "risk": "2",
+  "title": "Fully repaying a borrow of a fee-on-transfer token is challenging",
+  "issueId": 11,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/11"
+}
