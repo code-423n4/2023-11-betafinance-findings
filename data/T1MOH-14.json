@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "T1MOH",
+  "risk": "2",
+  "title": "User can escape liquidation if there are many markets with many tranches",
+  "issueId": 14,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/14"
+}
