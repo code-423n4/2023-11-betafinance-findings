@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "ladboy233",
+  "risk": "3",
+  "title": "Borrower can abuse enterMarkets to force liquidator can pay more fund",
+  "issueId": 19,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/19"
+}
