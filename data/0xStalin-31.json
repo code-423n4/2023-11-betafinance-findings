@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "0xStalin",
+  "risk": "2",
+  "title": "Repaying the full debt for on-transfer-fee tokens won't actually repay the full debt, it will leave some dust debt which will prevent users from exiting any of all the market they've entered, if any of the user's market expires and the account falls into liquidation, this will cause the user's account to be set automatically to a full liquidation without even checking if the liquidation should've had been a soft liqudiation",
+  "issueId": 31,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/31"
+}
