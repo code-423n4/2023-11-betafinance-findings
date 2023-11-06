@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "0xStalin",
+  "risk": "2",
+  "title": "Users can't repay their debts if the OmniPool contract is paused which can cause users to fall into liquidation and lose their collateral",
+  "issueId": 32,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/32"
+}
