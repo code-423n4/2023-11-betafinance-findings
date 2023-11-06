@@ -1,5 +1,6 @@
 | Issue  | Description |
 |--------|-------------|
+| Admin validation | should validate if duplicate market exists when admin set mode |
 | Account Count Limitation | In `OmniTokenNoBorrow.sol` and `OmniToken.sol`, only the first 25 accounts are counted toward the user balance. |
 | Airdrop Token Handling | `OmniTokenNoBorrow.sol` and `OmniToken.sol` are not equipped to handle airdrop tokens effectively. |
 | Borrow Cap Validation | `OmniPool.sol`'s `enterMarkets` does not check if the borrow cap is reached before entering the market. |
@@ -10,6 +11,24 @@
 | Token Decimals Caching | Token decimals should be cached in the oracle to avoid fetching them every time, which is a costly operation. |
 | Price Feed Deprecation Handling | Operations such as liquidation, borrowing, and withdrawal could be blocked if the oracle price becomes stale or the price feed is deprecated. |
 
+
+# Should validate if duplicate market exists when admin set mode
+
+when admin [set the mode](https://github.com/code-423n4/2023-11-betafinance/blob/0f1bb077afe8e8e03093c8f26dc0b7a2983c3e47/Omni_Protocol/src/OmniPool.sol#L537)
+
+```solidity
+   function setModeConfiguration(ModeConfiguration memory _modeConfiguration)
+        external
+        onlyRole(MARKET_CONFIGURATOR_ROLE)
+    {
+        if (_modeConfiguration.expirationTimestamp <= block.timestamp) { revert("OmniPool::setModeConfiguration: Bad expiration timestamp."); }
+        modeCount++;
+        modeConfigurations[modeCount] = _modeConfiguration;
+        emit SetModeConfiguration(modeCount, _modeConfiguration);
+    }
+```
+
+the code should validate if duplicate markets exists in the mode configuration to avoid double evaluting and counting user collateral
 
 # In OmniTokenNoBorrow.sol and OmniToken.sol, only first 25 account counts toward the user balance
 
