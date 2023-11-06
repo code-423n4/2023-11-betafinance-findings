@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "0xStalin",
+  "risk": "2",
+  "title": "Using only IsollatedCollateral to back loans can cause accounts to not be liquidable if the accounts fall into liquidation and there is not enough collateral to cover the repayed debt, which will cause the protocol to end up accruing badDebt in the borrowMarket",
+  "issueId": 29,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/29"
+}
