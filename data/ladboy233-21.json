@@ -1,0 +1,8 @@
+{
+  "contest": 303,
+  "handle": "ladboy233",
+  "risk": "2",
+  "title": "Chainlink oracle will return the wrong price for asset if underlying aggregator hits minAnswer / max answer",
+  "issueId": 21,
+  "issueUrl": "https://github.com/code-423n4/2023-11-betafinance-findings/issues/21"
+}
