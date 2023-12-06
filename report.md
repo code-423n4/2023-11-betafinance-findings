@@ -63,8 +63,6 @@ For more information regarding the severity criteria referenced throughout the s
 ## [[M-01] Borrower can abuse enterMarkets to force liquidator can pay more funds](https://github.com/code-423n4/2023-11-betafinance-findings/issues/37)
 *Submitted by [ladboy233](https://github.com/code-423n4/2023-11-betafinance-findings/issues/37)*
 
-# Lines of code
-
 https://github.com/code-423n4/2023-11-betafinance/blob/0f1bb077afe8e8e03093c8f26dc0b7a2983c3e47/Omni_Protocol/src/OmniPool.sol#L331
 
 https://github.com/code-423n4/2023-11-betafinance/blob/0f1bb077afe8e8e03093c8f26dc0b7a2983c3e47/Omni_Protocol/src/OmniPool.sol#L232
@@ -75,7 +73,7 @@ https://github.com/code-423n4/2023-11-betafinance/blob/0f1bb077afe8e8e03093c8f26
 
 Borrower can abuse enterMarkets to force liquidator can pay more fund.
 
-## Proof of Concept
+### Proof of Concept
 
 Liquidation process is in place to make sure the bad debt is paid, and when the liquidator repays the debt, they can seize the asset of the borrower as reward.
 
@@ -251,7 +249,7 @@ If the user call enter markets to enter more market, liquidator is likely to run
 
 As long as the user makes the liquidator feel like the gas cost of calling accrue is greater than liquidation seized asset, there will be no liquidation.
 
-## Recommended Mitigation Steps
+### Recommended Mitigation Steps
 
 Validate the max number of entered market for borrower.
 
